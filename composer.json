@@ -1,0 +1,39 @@
+{
+    "name": "timatanga/workflow",
+    "description": "The timatanga Workflow package. Manages classes/objects workflow state",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "psr/event-dispatcher": "^1.0",
+        "timatanga/events": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.0.x-dev",
+        "symfony/var-dumper": "6.0.x-dev"
+    },
+    "authors": [
+        {
+            "name": "Mark Fluehmann",
+            "email": "dbiz.apps@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "timatanga\\Workflow\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "timatanga\\Workflow\\Providers\\WorkflowServiceProvider"
+            ]
+        }
+    }
+}
